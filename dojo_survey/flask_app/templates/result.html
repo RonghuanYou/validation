@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>User Result</title>
+</head>
+<style>
+    .body-container{
+        margin: 0 auto;
+        width: 950px; 
+        font-family:Georgia, 'Times New Roman', Times, serif; 
+    }       
+
+    h3{
+        text-decoration: underline;  
+        margin: 20px 0px;
+    }
+
+    .table{
+        width: 900px;
+    }
+
+</style>
+<body>
+    <div class="body-container">
+        <h3>Submitted Info</h3>
+        <table class="table">
+            <tr>
+                <td> Name: </th>
+                <td> {{ dojo.name }}</td>
+            </tr>
+
+            <tr>
+                <td> Dojo Location: </th>
+                <td> {{ dojo.location }} </td>
+            </tr>
+
+            <tr>
+                <td> Favorite Language: </th>
+                <td> {{ dojo.language }} </td>
+            </tr>
+
+            <tr>
+                <td> Comment: </th>
+                <td> {{ dojo.comment }} </td>
+            </tr>
+        </table>
+        <a href="/" class="btn btn-secondary btn-lg right-side-btn" style="position: absolute; right: 0">Go Back</a>
+    </div>
+</body>
+</html>
