@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+</head>
+<style>
+    h2 {
+        text-decoration: underline;
+    }
+    
+    .message-hint {
+        width: 320px;
+        padding: 10px;
+        background-color: seagreen;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+    <div class="message-hint">
+        The email address you entered ({{ cur_email.email }})
+        is a VALID email address! Thank you!
+    </div>
+
+
+    <h2>Email Addresses Entered:</h2>
+    <table>
+        {% for email_info in all_emails %}
+            <tr>
+                <th>{{ email_info.email }}</th>
+                <th>{{ email_info.created_at }}</th>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

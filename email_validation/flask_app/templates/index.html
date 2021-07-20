@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<style>
+    h2 {
+        width: 200px;
+        padding: 20px;
+        background-color: red;
+        color: white;
+        text-align: center;
+    }
+</style>
+
+<body>
+    {% if get_flashed_messages() %}
+        {% with messages = get_flashed_messages() %}     
+            {% if messages %}                            
+                {% for message in messages %}            
+                    <h2>{{ message }}</h2>                   
+                {% endfor %}
+            {% endif %}
+        {% endwith %}   
+    {% endif %}
+
+    <form action="/create" method="post">
+        <p>
+            Email Address:
+            <input type="text" name="email">
+        </p>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
