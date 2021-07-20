@@ -36,8 +36,6 @@ class Email:
         results = connectToMySQL("emails_schema").query_db(query, data)
         return cls(results[0])
 
-
-    import re
     @staticmethod
     def email_validate(post_data):
         EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
